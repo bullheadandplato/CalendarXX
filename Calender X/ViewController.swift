@@ -8,18 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
+    @IBOutlet weak var container: UIView!
+    var settingController: SettingsController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        settingController = self.childViewControllers.last as? SettingsController
+        
     }
-
+    override func viewWillAppear(animated: Bool) {
+        settingController?.getData()
+    }
+    
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        //
     }
-
-
+    @IBAction func prevButtonPressed(sender: UIBarButtonItem) {
+        
+        settingController?.prevMonth()
+    }
+    @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
+        settingController?.nextMonth()
+    }
+    @IBAction func changeScene(sender: AnyObject) {
+        
+    }
 }
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="Countries" syncable="YES">
+        <attribute name="countryID" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="countryName" attributeType="String" syncable="YES"/>
+        <attribute name="selectStatus" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="relationship" maxCount="1" deletionRule="Nullify" destinationEntity="Events" syncable="YES"/>
+    </entity>
+    <entity name="Events" parentEntity="Countries" syncable="YES">
+        <attribute name="day" attributeType="Integer 16" minValueString="1" maxValueString="31" syncable="YES">
+            <userInfo>
+                <entry key="key" value="value"/>
+            </userInfo>
+        </attribute>
+        <attribute name="eventDescription" attributeType="String" syncable="YES"/>
+        <attribute name="monthNo" attributeType="Integer 16" minValueString="1" maxValueString="12" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Countries" positionX="-2961" positionY="-2187" width="128" height="103"/>
+        <element name="Events" positionX="-2655" positionY="-2140" width="128" height="88"/>
+    </elements>
+</model>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="Countries" representedClassName=".Countries" syncable="YES">
+        <attribute name="eventCount" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="selected" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Events" inverseName="ac" inverseEntity="Events" syncable="YES"/>
+    </entity>
+    <entity name="Events" representedClassName=".Events" syncable="YES">
+        <attribute name="day" attributeType="Integer 16" minValueString="1" maxValueString="31" syncable="YES"/>
+        <attribute name="des" attributeType="String" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" minValueString="1" maxValueString="12" syncable="YES"/>
+        <relationship name="ac" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Countries" inverseName="events" inverseEntity="Countries" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Countries" positionX="-45" positionY="0" width="128" height="103"/>
+        <element name="Events" positionX="243" positionY="-9" width="128" height="103"/>
+    </elements>
+</model>

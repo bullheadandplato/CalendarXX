@@ -1,25 +1,164 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yVX-GX-4gA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Settings-->
+        <scene sceneID="Odb-cH-Qcj">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="man" title="Settings" id="UJI-g9-Hr5" customClass="EventsController" customModule="Calender_X" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="xqc-D2-U9V"/>
+                        <viewControllerLayoutGuide type="bottom" id="kr4-KA-hnl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="vvc-So-f05">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" indicatorStyle="black" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZyN-lh-TEA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UJI-g9-Hr5" id="jI5-Et-x8I"/>
+                                    <outlet property="delegate" destination="UJI-g9-Hr5" id="hSn-11-c6G"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZyN-lh-TEA" firstAttribute="leading" secondItem="vvc-So-f05" secondAttribute="leading" id="P1o-x2-WBc"/>
+                            <constraint firstAttribute="trailing" secondItem="ZyN-lh-TEA" secondAttribute="trailing" id="XVc-RA-4Oo"/>
+                            <constraint firstItem="ZyN-lh-TEA" firstAttribute="top" secondItem="xqc-D2-U9V" secondAttribute="bottom" constant="-64" id="gJi-tr-KMn"/>
+                            <constraint firstItem="ZyN-lh-TEA" firstAttribute="bottom" secondItem="kr4-KA-hnl" secondAttribute="top" id="ihM-sv-V7x"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ZyN-lh-TEA" id="iyb-Ti-ePp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEz-RZ-ae9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="437" y="25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KQ0-X4-wfJ">
+            <objects>
+                <navigationController id="yVX-GX-4gA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Ua-Bh-YmL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.1229980289" green="0.56842195610000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1tv-ax-oPl" kind="relationship" relationship="rootViewController" id="71D-Ft-a92"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OrV-Z8-uZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1025" y="8"/>
+        </scene>
+        <!--main-->
+        <scene sceneID="1sK-rj-thE">
+            <objects>
+                <viewController storyboardIdentifier="main" title="main" id="1tv-ax-oPl" customClass="ViewController" customModule="Calender_X" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ese-p5-VXH"/>
+                        <viewControllerLayoutGuide type="bottom" id="jAp-6d-5eK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Rc-28-1BV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48G-pS-sKs">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Previous" id="KBa-aP-Qui">
+                                        <connections>
+                                            <action selector="prevButtonPressed:" destination="1tv-ax-oPl" id="iML-Nj-ohn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rQK-p1-Vs2"/>
+                                    <barButtonItem title="Next" id="aEU-wB-WVK">
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="1tv-ax-oPl" id="IZb-JU-fnL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IoY-mJ-cUl">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <connections>
+                                    <segue destination="kKE-si-zTg" kind="embed" id="Thd-gs-Kfk"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jAp-6d-5eK" firstAttribute="top" secondItem="IoY-mJ-cUl" secondAttribute="bottom" constant="44" id="2Ab-Ww-bGR"/>
+                            <constraint firstItem="48G-pS-sKs" firstAttribute="trailing" secondItem="IoY-mJ-cUl" secondAttribute="trailing" id="4Bh-1R-zjo"/>
+                            <constraint firstItem="IoY-mJ-cUl" firstAttribute="centerY" secondItem="9Rc-28-1BV" secondAttribute="centerY" constant="10" id="Giz-0i-Di4"/>
+                            <constraint firstItem="IoY-mJ-cUl" firstAttribute="leading" secondItem="9Rc-28-1BV" secondAttribute="leading" id="Wj5-td-V3O"/>
+                            <constraint firstItem="48G-pS-sKs" firstAttribute="top" secondItem="IoY-mJ-cUl" secondAttribute="bottom" id="a6X-sE-uug"/>
+                            <constraint firstItem="48G-pS-sKs" firstAttribute="leading" secondItem="IoY-mJ-cUl" secondAttribute="leading" id="enK-BS-HY0"/>
+                            <constraint firstItem="IoY-mJ-cUl" firstAttribute="centerX" secondItem="9Rc-28-1BV" secondAttribute="centerX" id="ySU-kk-qK2"/>
+                            <constraint firstAttribute="trailing" secondItem="IoY-mJ-cUl" secondAttribute="trailing" id="zhO-IT-q1m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calendar X" id="7d6-Ap-7or">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="aUz-TL-fa2">
+                            <color key="tintColor" red="1" green="0.0" blue="0.9839373911321081" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="UJI-g9-Hr5" kind="show" id="ReQ-gt-BmE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="container" destination="IoY-mJ-cUl" id="YcX-t3-ll5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMz-3A-ijO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-335" y="8"/>
+        </scene>
+        <!--google-->
+        <scene sceneID="HJ5-eq-bfg">
+            <objects>
+                <collectionViewController storyboardIdentifier="google" title="google" id="kKE-si-zTg" customClass="SettingsController" customModule="Calender_X" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="pJl-G3-zLQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OB6-r5-D0Z">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="xad" id="fOV-X1-cM7">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="kKE-si-zTg" id="TZk-YY-00A"/>
+                            <outlet property="delegate" destination="kKE-si-zTg" id="IXU-a2-18O"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zd-j8-MRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="-398"/>
         </scene>
     </scenes>
 </document>
