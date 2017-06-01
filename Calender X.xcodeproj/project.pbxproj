@@ -14,6 +14,7 @@
 		4A17625B1D53140500B3CA8C /* Events+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1762571D53140500B3CA8C /* Events+CoreDataProperties.swift */; };
 		4A17625C1D53140500B3CA8C /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1762581D53140500B3CA8C /* Events.swift */; };
 		4A2D30761D4E5997009D00DE /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D30751D4E5997009D00DE /* SettingsController.swift */; };
+		4A3231FA1EE044660081FCF9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3231F91EE044660081FCF9 /* Utils.swift */; };
 		4A46B4291D4F9FC000DAD230 /* CellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46B4281D4F9FC000DAD230 /* CellContent.swift */; };
 		4A46B42B1D4FA79000DAD230 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46B42A1D4FA79000DAD230 /* HeaderCell.swift */; };
 		4ABF2AFC1D4D01CC00601F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF2AFB1D4D01CC00601F1C /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 		4A1762571D53140500B3CA8C /* Events+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Events+CoreDataProperties.swift"; path = "Calender X/Events+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4A1762581D53140500B3CA8C /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Events.swift; path = "Calender X/Events.swift"; sourceTree = "<group>"; };
 		4A2D30751D4E5997009D00DE /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		4A3231F91EE044660081FCF9 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4A46B4281D4F9FC000DAD230 /* CellContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellContent.swift; sourceTree = "<group>"; };
 		4A46B42A1D4FA79000DAD230 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		4ABF2AF81D4D01CC00601F1C /* Calender X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calender X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 				4A0FD9711D51C45B00AEA000 /* DataModel.xcdatamodeld */,
 				4A0FD99D1D51D25F00AEA000 /* DataClass.swift */,
 				4AD336BA1D523AEC006D069A /* EventsManipulation.swift */,
+				4A3231F91EE044660081FCF9 /* Utils.swift */,
 			);
 			path = "Calender X";
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				4A17625C1D53140500B3CA8C /* Events.swift in Sources */,
 				4A17625A1D53140500B3CA8C /* Countries.swift in Sources */,
 				4A0FD9731D51C45B00AEA000 /* DataModel.xcdatamodeld in Sources */,
+				4A3231FA1EE044660081FCF9 /* Utils.swift in Sources */,
 				4A17625B1D53140500B3CA8C /* Events+CoreDataProperties.swift in Sources */,
 				4A2D30761D4E5997009D00DE /* SettingsController.swift in Sources */,
 				4A46B42B1D4FA79000DAD230 /* HeaderCell.swift in Sources */,

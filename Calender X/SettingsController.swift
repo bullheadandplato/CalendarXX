@@ -10,19 +10,21 @@ import UIKit
 
 class SettingsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var day: Int?
-    fileprivate var month1 = [["header": "January","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    fileprivate var month2 = [[ "header": "Febraury","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28"]]
-    fileprivate var month3 = [["header": "March","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    fileprivate var month4 = [["header": "April","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
-    fileprivate var month5 = [["header": "May","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    fileprivate var month6 = [["header": "June","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
-    fileprivate var month7 = [["header": "July","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    fileprivate var month8 = [["header": "August","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    fileprivate var month9 = [["header": "September","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
-    fileprivate var month10 = [["header": "Octobar","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    fileprivate var month11 = [["header": "November","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
-    fileprivate var month12 = [["header": "December","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month1 = [["header": "January","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month2 = [[ "header": "Febraury","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28"]]
+    fileprivate var month3 = [["header": "March","content": "27 28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month4 = [["header": "April","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
+    fileprivate var month5 = [["header": "May","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month6 = [["header": "June","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
+    fileprivate var month7 = [["header": "July","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month8 = [["header": "August","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month9 = [["header": "September","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
+    fileprivate var month10 = [["header": "Octobar","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month11 = [["header": "November","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
+    fileprivate var month12 = [["header": "December","content": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
  
+    fileprivate var currentData=[Int]() //data used to fill the collectionview
+    
     //month events and data format for dictionary is [day:description]
     fileprivate var month1Events = [Int:String]()
     fileprivate var month2Events = [Int:String]()
@@ -75,6 +77,7 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         getData()
         monthChanged()
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,9 +88,20 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
     func wordsInSection(_ section: Int) -> [String] {
         
         let content = selectedMonth[section]["content"]
+        let components=NSDateComponents()
+        
+        components.day=1
+        components.year=currentYear
+        components.month=selectedMonthIndex
+        let date = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: components as DateComponents)
+        
+        let day=Utils.getCurrentDay(date: date!);
+        let prevMonthIndex=selectedMonthIndex-1;
+        var finalContents=Utils.getPrevMonthDays(month: prevMonthIndex,isLeap: currentYear, noOfday: day-1)
+        finalContents+=content!
         let spaces = CharacterSet.whitespacesAndNewlines
-        let words = content?.components(separatedBy: spaces)
-        return words!
+        let words = finalContents.components(separatedBy: spaces)
+        return words
     }
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -96,12 +110,14 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         let words = wordsInSection(section)
         return words.count
     }
+    
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath)
         -> UICollectionViewCell {
             let words = wordsInSection(indexPath.section)
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: "CONTENT", for: indexPath) as! CellContent
+            
             cell.maxWidth = collectionView.bounds.size.width
             cell.text = words[indexPath.row]
             let tmp1 = [Int](selectedEvents.keys)
@@ -154,6 +170,7 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         switch selectedMonthIndex {
         case 1: selectedMonth = month1
         selectedEvents = month1Events
+    
             break
         case 2: selectedMonth = month2
         selectedEvents = month2Events
@@ -192,6 +209,7 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
             
         }
     }
+
     
     func prevMonth( ){
         if selectedMonthIndex == 1{
