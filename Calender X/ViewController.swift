@@ -17,21 +17,21 @@ class ViewController: UIViewController{
         settingController = self.childViewControllers.last as? SettingsController
         
     }
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         settingController?.getData()
     }
     
     override func didReceiveMemoryWarning() {
         //
     }
-    @IBAction func prevButtonPressed(sender: UIBarButtonItem) {
+    @IBAction func prevButtonPressed(_ sender: UIBarButtonItem) {
         
         settingController?.prevMonth()
     }
-    @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
+    @IBAction func nextButtonPressed(_ sender: UIBarButtonItem) {
         settingController?.nextMonth()
     }
-    @IBAction func changeScene(sender: AnyObject) {
+    @IBAction func changeScene(_ sender: AnyObject) {
         
     }
 }

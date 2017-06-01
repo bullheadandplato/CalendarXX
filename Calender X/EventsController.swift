@@ -31,15 +31,15 @@ class EventsController: UIViewController,UITableViewDataSource,UITableViewDelega
         }
     }
     @IBOutlet weak var tableView: UITableView!
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         tableView!.setEditing(true, animated: true)
     }
-    func tableView(tableView: UITableView,
-                   cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier)
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: simpleTableIdentifier)
         if (cell == nil) {
             cell = UITableViewCell(
-                style: UITableViewCellStyle.Subtitle,
+                style: UITableViewCellStyle.subtitle,
                 reuseIdentifier: simpleTableIdentifier)
         }
         if indexPath.section == 0{
@@ -57,14 +57,14 @@ class EventsController: UIViewController,UITableViewDataSource,UITableViewDelega
         return cell!
     }
     
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-        func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    func tableView(tableView: UITableView,
+    func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         if section == 0{
             return countryNameSelected.count
@@ -72,24 +72,24 @@ class EventsController: UIViewController,UITableViewDataSource,UITableViewDelega
             return countryNameNotSelected.count
         }
     }
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section==0{
             return "Include Events From"
         }else{
             return "Do not include"
         }
     }
-    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-        return UITableViewCellEditingStyle.None
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.none
     }
-    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         if sourceIndexPath.section != destinationIndexPath.section{
             if sourceIndexPath.section == 0{
                 let item = countryNameSelected[sourceIndexPath.row]
-                countryNameSelected.removeAtIndex(sourceIndexPath.row)
+                countryNameSelected.remove(at: sourceIndexPath.row)
                 countryNameNotSelected.append(item)
                 
                 //presist in store
@@ -101,7 +101,7 @@ class EventsController: UIViewController,UITableViewDataSource,UITableViewDelega
             }else{
                 let item = countryNameNotSelected[sourceIndexPath.row]
                 countryNameSelected.append(item)
-                countryNameNotSelected.removeAtIndex(sourceIndexPath.row)
+                countryNameNotSelected.remove(at: sourceIndexPath.row)
                 data.setSelected(1, countryName: item)
                 tableView.reloadData()
             }
@@ -109,8 +109,8 @@ class EventsController: UIViewController,UITableViewDataSource,UITableViewDelega
         
     }
    
-    @IBAction func changeScene(sender: AnyObject) {
-        let view = self.storyboard?.instantiateViewControllerWithIdentifier("main") as! ViewController
-        self.presentViewController(view, animated: true, completion: nil)
+    @IBAction func changeScene(_ sender: AnyObject) {
+        let view = self.storyboard?.instantiateViewController(withIdentifier: "main") as! ViewController
+        self.present(view, animated: true, completion: nil)
     }
 }

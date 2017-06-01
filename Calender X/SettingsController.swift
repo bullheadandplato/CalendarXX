@@ -10,65 +10,65 @@ import UIKit
 
 class SettingsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var day: Int?
-    private var month1 = [["header": "January","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    private var month2 = [[ "header": "Febraury","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28"]]
-    private var month3 = [["header": "March","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    private var month4 = [["header": "April","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
-    private var month5 = [["header": "May","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    private var month6 = [["header": "June","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
-    private var month7 = [["header": "July","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    private var month8 = [["header": "August","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    private var month9 = [["header": "September","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
-    private var month10 = [["header": "Octobar","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
-    private var month11 = [["header": "November","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
-    private var month12 = [["header": "December","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month1 = [["header": "January","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month2 = [[ "header": "Febraury","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28"]]
+    fileprivate var month3 = [["header": "March","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month4 = [["header": "April","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
+    fileprivate var month5 = [["header": "May","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month6 = [["header": "June","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
+    fileprivate var month7 = [["header": "July","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month8 = [["header": "August","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month9 = [["header": "September","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
+    fileprivate var month10 = [["header": "Octobar","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
+    fileprivate var month11 = [["header": "November","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"]]
+    fileprivate var month12 = [["header": "December","content": "0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"]]
  
     //month events and data format for dictionary is [day:description]
-    private var month1Events = [Int:String]()
-    private var month2Events = [Int:String]()
-    private var month3Events = [Int:String]()
-    private var month4Events = [Int:String]()
-    private var month5Events = [Int:String]()
-    private var month6Events = [Int:String]()
-    private var month7Events = [Int:String]()
-    private var month8Events = [Int:String]()
-    private var month9Events = [Int:String]()
-    private var month10Events = [Int:String]()
-    private var month11Events = [Int:String]()
-    private var month12Events = [Int:String]()
+    fileprivate var month1Events = [Int:String]()
+    fileprivate var month2Events = [Int:String]()
+    fileprivate var month3Events = [Int:String]()
+    fileprivate var month4Events = [Int:String]()
+    fileprivate var month5Events = [Int:String]()
+    fileprivate var month6Events = [Int:String]()
+    fileprivate var month7Events = [Int:String]()
+    fileprivate var month8Events = [Int:String]()
+    fileprivate var month9Events = [Int:String]()
+    fileprivate var month10Events = [Int:String]()
+    fileprivate var month11Events = [Int:String]()
+    fileprivate var month12Events = [Int:String]()
 
-    private var selectedMonth = [[String:String]]()
-    private var selectedEvents = [Int:String]()
-    private var selectedMonthIndex:Int = 0
-    private var currentMonth:Int = 0
-    private var currentYear:Int = 0
-    private var selectedYear:Int = 0
+    fileprivate var selectedMonth = [[String:String]]()
+    fileprivate var selectedEvents = [Int:String]()
+    fileprivate var selectedMonthIndex:Int = 0
+    fileprivate var currentMonth:Int = 0
+    fileprivate var currentYear:Int = 0
+    fileprivate var selectedYear:Int = 0
     var countryFix = [NSNumber:String]()
     var data = DataClass()
     var events = [EventsManipulation]()
-    private var totalEvents:Int = 0
+    fileprivate var totalEvents:Int = 0
     
    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        collectionView!.registerClass(CellContent.self, forCellWithReuseIdentifier: "CONTENT")
-        collectionView!.registerClass(HeaderCell.self,
+        collectionView!.register(CellContent.self, forCellWithReuseIdentifier: "CONTENT")
+        collectionView!.register(HeaderCell.self,
                                       forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
                                       withReuseIdentifier: "HEADER")
         
         let layout = collectionView!.collectionViewLayout
         let flow = layout as! UICollectionViewFlowLayout
-        flow.headerReferenceSize = CGSizeMake(100, 20)
+        flow.headerReferenceSize = CGSize(width: 100, height: 20)
         
         //get todays date
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Day, .Month, .Year ], fromDate: date)
-        selectedMonthIndex = components.month
-        currentMonth = components.month
-        currentYear = components.year
+        let date = Date()
+        let calendar = Calendar.current
+        let components = (calendar as NSCalendar).components([.day, .month, .year ], from: date)
+        selectedMonthIndex = components.month!
+        currentMonth = components.month!
+        currentYear = components.year!
         selectedYear = currentYear
         day = components.day
         //fill data for events
@@ -82,26 +82,26 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         // Dispose of any resources that can be recreated.
     }
     
-    func wordsInSection(section: Int) -> [String] {
+    func wordsInSection(_ section: Int) -> [String] {
         
         let content = selectedMonth[section]["content"]
-        let spaces = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-        let words = content?.componentsSeparatedByCharactersInSet(spaces)
+        let spaces = CharacterSet.whitespacesAndNewlines
+        let words = content?.components(separatedBy: spaces)
         return words!
     }
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let words = wordsInSection(section)
         return words.count
     }
-    override func collectionView(collectionView: UICollectionView,
-                                 cellForItemAtIndexPath indexPath: NSIndexPath)
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath)
         -> UICollectionViewCell {
             let words = wordsInSection(indexPath.section)
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
-                "CONTENT", forIndexPath: indexPath) as! CellContent
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: "CONTENT", for: indexPath) as! CellContent
             cell.maxWidth = collectionView.bounds.size.width
             cell.text = words[indexPath.row]
             let tmp1 = [Int](selectedEvents.keys)
@@ -109,54 +109,48 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
             //be sure to set label background
             if day == Int(cell.text!) && selectedMonthIndex == currentMonth && selectedYear == currentYear{
                 cell.label.backgroundColor = UIColor(patternImage: UIImage(named: "today")!)
-            }else if Int(cell.text!) == 0{
-                cell.text = " "
-                cell.label.backgroundColor = UIColor.whiteColor()
             }else if tmp != 0{
-                cell.label.textColor = UIColor.whiteColor()
-                cell.label.font = UIFont.boldSystemFontOfSize(20)
+                cell.label.font = UIFont.boldSystemFont(ofSize: 20)
                 if getCountryforDate(selectedMonthIndex, day: Int(cell.text!)!) == "Amerirca (USA)"{
                     cell.label.backgroundColor = UIColor(patternImage: UIImage(named: "usa")!)
-                                    }else if getCountryforDate(selectedMonthIndex, day: Int(cell.text!)!) == "Pakistan" {
+                    }
+                else if getCountryforDate(selectedMonthIndex, day: Int(cell.text!)!) == "Pakistan" {
                     cell.label.backgroundColor = UIColor(patternImage: UIImage(named: "pak")!)
 
                 }
             }else{
-                cell.label.textColor = UIColor.blackColor()
-                cell.label.font = UIFont.boldSystemFontOfSize(16)
+                cell.label.textColor = UIColor.black
+                cell.label.font = UIFont.boldSystemFont(ofSize: 16)
 
-                cell.label.backgroundColor = UIColor(patternImage: UIImage(named: "all")!)
             }
             return cell
     }
     
-    func collectionView(collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
-                               sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+                               sizeForItemAt indexPath: IndexPath) -> CGSize {
         let words = wordsInSection(indexPath.section)
         let size = CellContent.sizeForContentString(words[indexPath.row],
                                                     forMaxWidth: collectionView.bounds.size.width)
         return size
     }
     
-    override func collectionView(collectionView: UICollectionView,
+    override func collectionView(_ collectionView: UICollectionView,
                                  viewForSupplementaryElementOfKind kind: String,
-                                                                   atIndexPath indexPath: NSIndexPath)
+                                                                   at indexPath: IndexPath)
         -> UICollectionReusableView {
             if (kind == UICollectionElementKindSectionHeader) {
                 let cell =
-                    collectionView.dequeueReusableSupplementaryViewOfKind(
-                        kind, withReuseIdentifier: "HEADER",
-                        forIndexPath: indexPath) as! HeaderCell
+                    collectionView.dequeueReusableSupplementaryView(
+                        ofKind: kind, withReuseIdentifier: "HEADER",
+                        for: indexPath) as! HeaderCell
                 cell.maxWidth = collectionView.bounds.size.width
-                cell.text = selectedMonth[indexPath.section]["header"]
-                //append year with month name
-                cell.text.appendContentsOf(" "+String(currentYear))
+                cell.text = "Sun       Mon       Tue       Wed       Thr       Fri       Sat"
                 return cell
             }
             abort()
     }
-    private func monthChanged(){
+    fileprivate func monthChanged(){
         switch selectedMonthIndex {
         case 1: selectedMonth = month1
         selectedEvents = month1Events
@@ -209,16 +203,16 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         monthChanged()
         collectionView!.reloadData()
     }
-    override func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
             animateCell(cell)
     }
-    func animateCell(cell:UICollectionViewCell) {
+    func animateCell(_ cell:UICollectionViewCell) {
         cell.layer.opacity = 0
         let anim = CABasicAnimation(keyPath: "opacity")
         anim.fromValue = 0
         anim.toValue = 1
         anim.duration = 2
-        cell.layer.addAnimation(anim, forKey: anim.keyPath)
+        cell.layer.add(anim, forKey: anim.keyPath)
         cell.layer.opacity=1
     }
     func nextMonth(){
@@ -231,7 +225,7 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         monthChanged()
         collectionView?.reloadData()
     }
-    private func fillEventsData(month:Int, day:Int,description:String){
+    fileprivate func fillEventsData(_ month:Int, day:Int,description:String){
         switch month {
         case 1: month1Events.updateValue(description, forKey: day)
         break;
@@ -261,7 +255,7 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
             break
         }
     }
-    private func eventDayinMonth(month:[Int], cellText:Int)->Int{
+    fileprivate func eventDayinMonth(_ month:[Int], cellText:Int)->Int{
         var y:Int = 0
 
         for x in month{
@@ -271,7 +265,7 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         }
          return y
     }
-    func getEventDescription(month:Int,day:Int)->String{
+    func getEventDescription(_ month:Int,day:Int)->String{
         switch month {
         case 1: if month1Events[day] == nil{
             return "No event for \(day) January, Goto Settings to add events"
@@ -355,9 +349,9 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         return selectedMonthIndex
     }
     
-    private func getCountryforDate(month:Int, day:Int)->String{
+    fileprivate func getCountryforDate(_ month:Int, day:Int)->String{
         for (key,value) in countryFix{
-            if key == month{
+            if key.intValue == month{
                 for (c,_) in selectedEvents{
                     if c == day{
                         return value

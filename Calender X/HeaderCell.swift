@@ -19,14 +19,13 @@ class HeaderCell: CellContent {
     */
     override init(frame: CGRect) {
         super.init(frame: frame)
-        label.backgroundColor = UIColor(red: 1, green: 0.97, blue: 0.97, alpha: 1)
-        label.textColor = UIColor(red: 0.4667, green: 0.533, blue: 0.6, alpha: 1)
+
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     override class func defaultFont() -> UIFont {
-        let font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        let font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
         return font
     }
 
