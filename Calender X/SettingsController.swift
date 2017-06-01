@@ -85,6 +85,7 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         // Dispose of any resources that can be recreated.
     }
     
+    
     func wordsInSection(_ section: Int) -> [String] {
         
         let content = selectedMonth[section]["content"]
@@ -103,9 +104,11 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
         let words = finalContents.components(separatedBy: spaces)
         return words
     }
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let words = wordsInSection(section)
         return words.count
@@ -120,18 +123,33 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
             
             cell.maxWidth = collectionView.bounds.size.width
             cell.text = words[indexPath.row]
+            
+            //cell label shape
+            cell.label.layer.borderWidth=2.0
+            cell.label.layer.cornerRadius=cell.label.frame.size.width/2
+            cell.label.layer.borderColor=UIColor.white.cgColor
+
             let tmp1 = [Int](selectedEvents.keys)
             let tmp = eventDayinMonth(tmp1, cellText: Int(cell.text)!)
-            //be sure to set label background
-            if day == Int(cell.text!) && selectedMonthIndex == currentMonth && selectedYear == currentYear{
-                cell.label.backgroundColor = UIColor(patternImage: UIImage(named: "today")!)
+            //be sure to set label background for today
+            let components=NSDateComponents()
+            
+            components.day=Int(cell.text!)!
+            components.year=currentYear
+            components.month=selectedMonthIndex
+            let date = NSCalendar(identifier: NSCalendar.Identifier.gregorian)?.date(from: components as DateComponents)
+
+            if Utils.isToday(date: date!){
+                print("date date")
+                cell.label.layer.borderColor=UIColor.black.cgColor
+            
             }else if tmp != 0{
                 cell.label.font = UIFont.boldSystemFont(ofSize: 20)
                 if getCountryforDate(selectedMonthIndex, day: Int(cell.text!)!) == "Amerirca (USA)"{
-                    cell.label.backgroundColor = UIColor(patternImage: UIImage(named: "usa")!)
+                    cell.label.layer.borderColor=UIColor.blue.cgColor
                     }
                 else if getCountryforDate(selectedMonthIndex, day: Int(cell.text!)!) == "Pakistan" {
-                    cell.label.backgroundColor = UIColor(patternImage: UIImage(named: "pak")!)
+                    cell.label.layer.borderColor=UIColor.green.cgColor
 
                 }
             }else{
@@ -161,7 +179,7 @@ class SettingsController: UICollectionViewController, UICollectionViewDelegateFl
                         ofKind: kind, withReuseIdentifier: "HEADER",
                         for: indexPath) as! HeaderCell
                 cell.maxWidth = collectionView.bounds.size.width
-                cell.text = "Sun       Mon       Tue       Wed       Thr       Fri       Sat"
+                cell.text = "Sun      Mon       Tue      Wed      Thr      Fri       Sat"
                 return cell
             }
             abort()

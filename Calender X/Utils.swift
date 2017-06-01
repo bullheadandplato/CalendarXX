@@ -8,11 +8,16 @@
 
 import Foundation
 class Utils{
+    static func isToday(date:Date)->Bool{
+        let order=NSCalendar.current.compare(Date(), to: date, toGranularity: .day)
+        return order==ComparisonResult.orderedSame
+    }
+
     static func getCurrentDay(date:Date)->Int{
           return  Date().startOfMonth(date: date)
 
-
     }
+    
     static func getPrevMonthDays(month: Int,isLeap:Int, noOfday:Int)->String{
     
         switch month {
@@ -58,7 +63,8 @@ class Utils{
         }
         return temp
     }
-
+    
+    
 }
 extension Date {
     func startOfMonth(date: Date) -> Int {
